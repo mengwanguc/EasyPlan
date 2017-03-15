@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // register default values for settings
+        let userdefaults = UserDefaults.standard
+        let defaults = ["developer1_name": "Haoze Wang", "developer2_name": "Meng Wang"]
+        
+        userdefaults.register(defaults: defaults)
+        userdefaults.synchronize()
+        
+        // first launch time
+        if let initialTime = UserDefaults.standard.object(forKey: "Initial Launch") as? NSDate{
+            print(initialTime)
+        } else {
+            let date = NSDate()
+            UserDefaults.standard.set(date, forKey: "Initial Launch")
+            print(date)
+        }
+        
+        
         return true
     }
 
