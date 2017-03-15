@@ -193,7 +193,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     
 
     
-    
+    // set the function of submit button
     @IBAction func SubmitSchedule(_ sender: Any) {
         if(UITextLabel.text == ""){
             let alert = UIAlertController(title: "Error",message:"Please set the title of this schedule", preferredStyle:UIAlertControllerStyle.alert)
@@ -342,6 +342,8 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         
     }
     
+    
+    // set the function of "finish" button
     @IBAction func Finish(_ sender: Any) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.UIPickerView.center.y = 1000

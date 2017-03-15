@@ -87,32 +87,9 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
             cell.descLabel.text = issue.desc
             return cell
     }
-    /*
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(task[0].title)
-        if segue.identifier == "showweather"
-        {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = task[indexPath.row]
-                
-                let controller = segue.destination as! ScheduleDetail
-                controller.point_begin = object.point_begin
-                controller.point_begin = object.point_end
-                controller.location_begin = object.begin
-                controller.location_end = object.end
-                print(object.title)
-                controller.task = object
-            }
-        }
-    }
- */
-    /*
-    func updatadayschedule(){
-        tableView.reloadData()
-    }
- 
-   */
+  
+    
+    // set the function of "submit" button 
     @IBAction func AddSchedule(_ sender: Any) {
         let actionSheetController: UIAlertController = UIAlertController(title: "Please select", message: "Option to select", preferredStyle: .actionSheet)
         
