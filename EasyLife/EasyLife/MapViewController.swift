@@ -11,6 +11,7 @@ import MapKit
 import SystemConfiguration
 
 /// - Attribution: https://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/
+/// - Description: the view controller which shows the map
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -200,7 +201,7 @@ class MapViewController: UIViewController {
         name = name.replacingOccurrences(of: "\"", with: "")
         name = name.replacingOccurrences(of: " ", with: "+")
         do {
-            try SharedNetworking.networkInstance.googlePlaceSearchResults(latitute: latitude, longitute: longitute, name: name) { (result, success) -> Void in
+            try MapNetworking.networkInstance.googlePlaceSearchResults(latitute: latitude, longitute: longitute, name: name) { (result, success) -> Void in
                 if success == true {
                     DispatchQueue.main.async {
                         self.bottomView?.isHidden = false
@@ -214,7 +215,7 @@ class MapViewController: UIViewController {
                         guard let iconUrl = result["icon"] as? String else {   return}
                         
                         do {
-                            try SharedNetworking.networkInstance.downloadImage(urlString: iconUrl){
+                            try MapNetworking.networkInstance.downloadImage(urlString: iconUrl){
                                 (imageData, success) -> Void in
                                 if success {
                                     print(2)
@@ -253,9 +254,6 @@ class MapViewController: UIViewController {
             }))
             self.present(alert, animated: true, completion: nil)
         }
-        
-        
-        
     }
     
     // convert the coordinate degree into string
@@ -337,6 +335,7 @@ extension MapViewController: MapSearchProtocol {
 
 // customize the mapview
 extension MapViewController : MKMapViewDelegate {
+    // annatation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             //return nil so map view draws "blue dot" for standard user location
@@ -355,14 +354,14 @@ extension MapViewController : MKMapViewDelegate {
         return pinView
     }
     
-    
+    // render the map
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
         renderer.strokeColor = UIColor.blue
         return renderer
     }
     
-    
+    // open the direction view
     func showDirectionView() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DirectionViewController") as! DirectionViewController
         vc.scheduleSetLocationProtocolDelegate = self.scheduleSetLocationProtocolDelegate

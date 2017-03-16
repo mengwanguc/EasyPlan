@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// - Description: the view controller which shows the detail of the place
 class PlaceDetailViewController: UIViewController {
 
     var locationDetail: [String: AnyObject]? = nil
@@ -217,7 +218,7 @@ class PlaceDetailViewController: UIViewController {
         if let photoRef = photoInfo["photo_reference"] as? String {
             let photoUrl = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=125&photoreference=\(photoRef)&key=AIzaSyBIMD_Nulnv7yw4OaKa-rEAqvI3I_hAv4E"
             do {
-                try SharedNetworking.networkInstance.downloadImage(urlString: photoUrl){
+                try MapNetworking.networkInstance.downloadImage(urlString: photoUrl){
                     (imageData, success) -> Void in
                     if success {
                         DispatchQueue.main.async {

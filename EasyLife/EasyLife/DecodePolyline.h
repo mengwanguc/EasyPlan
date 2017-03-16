@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-
+/// - Description: decode the encoded polyline into MKPolyline
 @interface DecodePolyline : NSObject
 
 + (MKPolyline *)polylineWithEncodedString:(NSString *)encodedString;

@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 
+/// - Description: a view controller which searches for the location of the source node and destination and transfers the data to the direction view controller
 class SelectLocationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var navigationBar: UINavigationBar!

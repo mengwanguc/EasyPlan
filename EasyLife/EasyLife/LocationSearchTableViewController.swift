@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 /// - Attribution: https://www.thorntech.com/2016/01/how-to-search-for-location-using-apples-mapkit/
+/// - Description: the view controller which shows the results of location search
 class LocationSearchTableViewController: UITableViewController {
     
     // search results
@@ -84,7 +85,7 @@ class LocationSearchTableViewController: UITableViewController {
     
 }
 
-
+// update search results
 extension LocationSearchTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         // unwrap the optional value

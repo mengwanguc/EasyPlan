@@ -11,9 +11,11 @@ import UIKit
 import SystemConfiguration
 
 // singleton class
-class SharedNetworking {
+/// This class is mainly served for networkings in maps.
+/// Because the app is implemented by me and my partner, we have two networing classes, but they actually have different functions.
+class MapNetworking {
     
-    static let networkInstance = SharedNetworking()
+    static let networkInstance = MapNetworking()
     
     // custom errortype
     enum networkError: Error {
@@ -33,6 +35,8 @@ class SharedNetworking {
         
         // initialize the results
         var routes = [AnyObject]()
+        
+        print(url)
         
         // Transform the `url` parameter argument to a `URL`
         guard let url = NSURL(string: url) else {
@@ -151,7 +155,8 @@ class SharedNetworking {
         let key = "AIzaSyBIMD_Nulnv7yw4OaKa-rEAqvI3I_hAv4E"
         
         placeSearchUrl += "&key=\(key)"
-
+        
+        print(placeSearchUrl)
         
         // Transform the `url` parameter argument to a `URL`
         guard let url = NSURL(string: placeSearchUrl) else {
@@ -303,6 +308,7 @@ class SharedNetworking {
         
         placeDetailUrl += "&key=\(key)"
         
+        print(placeDetailUrl)
         
         // Transform the `url` parameter argument to a `URL`
         guard let url = NSURL(string: placeDetailUrl) else {
@@ -412,6 +418,8 @@ class SharedNetworking {
         
         // initialize the results
         var imageData = NSData()
+        
+        print(urlString)
         
         // Transform the `url` parameter argument to a `URL`
         guard let url = URL(string: urlString) else {

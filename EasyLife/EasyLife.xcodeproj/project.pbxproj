@@ -16,7 +16,7 @@
 		A9CD78A41E7379C90024F2A1 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A31E7379C90024F2A1 /* LocationSearchTableViewController.swift */; };
 		A9CD78A61E7379F70024F2A1 /* MapSearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A51E7379F70024F2A1 /* MapSearchProtocol.swift */; };
 		A9CD78A81E737A0E0024F2A1 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A71E737A0E0024F2A1 /* ReachAbility.swift */; };
-		A9CD78AA1E737A370024F2A1 /* SharedNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A91E737A370024F2A1 /* SharedNetworking.swift */; };
+		A9CD78AA1E737A370024F2A1 /* MapNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78A91E737A370024F2A1 /* MapNetworking.swift */; };
 		A9CD78AC1E737A5F0024F2A1 /* DecodePolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78AB1E737A5F0024F2A1 /* DecodePolyline.m */; };
 		A9CD78AF1E7386470024F2A1 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78AE1E7386470024F2A1 /* DirectionViewController.swift */; };
 		A9CD78B31E73C0940024F2A1 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CD78B21E73C0940024F2A1 /* SelectLocationViewController.swift */; };
@@ -77,7 +77,7 @@
 		A9CD78A31E7379C90024F2A1 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
 		A9CD78A51E7379F70024F2A1 /* MapSearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearchProtocol.swift; sourceTree = "<group>"; };
 		A9CD78A71E737A0E0024F2A1 /* ReachAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
-		A9CD78A91E737A370024F2A1 /* SharedNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedNetworking.swift; sourceTree = "<group>"; };
+		A9CD78A91E737A370024F2A1 /* MapNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapNetworking.swift; sourceTree = "<group>"; };
 		A9CD78AB1E737A5F0024F2A1 /* DecodePolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodePolyline.m; sourceTree = "<group>"; };
 		A9CD78AD1E737AB30024F2A1 /* DecodePolyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecodePolyline.h; sourceTree = "<group>"; };
 		A9CD78AE1E7386470024F2A1 /* DirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DirectionViewController.swift; path = ../DirectionViewController.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				A9CD78A31E7379C90024F2A1 /* LocationSearchTableViewController.swift */,
 				A9CD78A51E7379F70024F2A1 /* MapSearchProtocol.swift */,
 				A9CD78A71E737A0E0024F2A1 /* ReachAbility.swift */,
-				A9CD78A91E737A370024F2A1 /* SharedNetworking.swift */,
+				A9CD78A91E737A370024F2A1 /* MapNetworking.swift */,
 				A9CD78AB1E737A5F0024F2A1 /* DecodePolyline.m */,
 				A9CD78AD1E737AB30024F2A1 /* DecodePolyline.h */,
 				A9CD78AE1E7386470024F2A1 /* DirectionViewController.swift */,
@@ -353,7 +353,7 @@
 				B1E866681E73213000ED5F09 /* weatherforecastcell.swift in Sources */,
 				A97D866C1E75D4E300DA12F7 /* ScheduleSetLocationProtocol.swift in Sources */,
 				B1B089501E6FBF900089ABB0 /* ViewController.swift in Sources */,
-				A9CD78AA1E737A370024F2A1 /* SharedNetworking.swift in Sources */,
+				A9CD78AA1E737A370024F2A1 /* MapNetworking.swift in Sources */,
 				B19235DB1E78F59100877033 /* ShowSplashScreen.swift in Sources */,
 				A9CD78B31E73C0940024F2A1 /* SelectLocationViewController.swift in Sources */,
 				A9CD78A41E7379C90024F2A1 /* LocationSearchTableViewController.swift in Sources */,

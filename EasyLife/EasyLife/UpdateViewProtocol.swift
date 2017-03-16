@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// - Description: the protocol which is used to update the schedules
 protocol UpdateViewProtocol {
     func updatedayschedule()
 }

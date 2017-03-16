@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 
+/// - Description: show directions and routes between origin node and destination
 class DirectionViewController: UIViewController, UITabBarDelegate{
 
     @IBOutlet weak var backButton: UIButton!
@@ -185,7 +186,7 @@ class DirectionViewController: UIViewController, UITabBarDelegate{
         
         // get the route using google map API
         do {
-            try SharedNetworking.networkInstance.googleMapDirectionResults(url: googleMapUrl) {
+            try MapNetworking.networkInstance.googleMapDirectionResults(url: googleMapUrl) {
                 (routes, success) -> Void in
                 print("-------------")
                 if routes.count>0 {

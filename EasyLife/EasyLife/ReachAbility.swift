@@ -10,8 +10,8 @@
 import Foundation
 import SystemConfiguration
 
-/// Attribution: http://stackoverflow.com/questions/39558868/check-internet-connection-ios-10
-
+/// - Attribution: http://stackoverflow.com/questions/39558868/check-internet-connection-ios-10
+/// - Description: check the internet availability
 open class ReachAbility {
     class func isInternetAvailable() -> Bool
     {
