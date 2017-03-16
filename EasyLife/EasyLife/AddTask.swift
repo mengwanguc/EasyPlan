@@ -93,6 +93,8 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         
     }
     
+    
+    // remove keyboard when tap away
     func tappedAwayFunction(sender: UITapGestureRecognizer){
         print(TextField.text)
         temp_view = TextField.text
@@ -101,12 +103,14 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         UITextLabel.resignFirstResponder()
     }
     
+    // set the function of return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         temp_field = textField.text
         textField.resignFirstResponder()
         return true
     }
     
+
     func setTextField(){
         TextField.layer.backgroundColor = UIColor.white.cgColor
         TextField.layer.borderColor = UIColor.gray.cgColor
@@ -120,7 +124,7 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         TextField.layer.shadowRadius = 1.0
     }
     
-    
+    // set the original text of text view
     func textViewDidBeginEditing(_ textView: UITextView) {
         if(textView.text == "Please enter the description of the schedule"){
             textView.text = ""
@@ -139,11 +143,15 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // set the action of a button
     @IBAction func GiveupTask(_ sender: Any) {
         self.dismiss(animated: true, completion: nil);
     }
     
     
+    
+    // set the action of the submit button
     @IBAction func Submit(_ sender: Any) {
         if(UITextLabel.text == ""){
             let alert = UIAlertController(title: "Error",message:"Please set the title of this schedule", preferredStyle:UIAlertControllerStyle.alert)
@@ -229,6 +237,7 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
     }
     
     
+    // creat a array of string to store date
     func creatday(){
         day.append("Today")
         date.append(Date())
@@ -373,7 +382,9 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
         formatter.dateFormat = "yy/MM/dd/EEE HH:mm"
         return formatter.date(from: string)!
     }
-
+    
+    
+    //set the function of "set event time" button
     @IBAction func SetBeginTime(_ sender: Any) {
         whether_set_begin_time = true
         if(flag == 1){
@@ -401,7 +412,7 @@ class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPicker
 
     }
  
-    
+    // set the function of "set reminder time" button 
     @IBAction func SetRemTime(_ sender: Any) {
         whether_set_rem_time = true
         if(flag == 1){

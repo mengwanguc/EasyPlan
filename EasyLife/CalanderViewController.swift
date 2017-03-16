@@ -193,6 +193,8 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         
     }
     
+    
+    // show the Month on the label
     func showLabelString(_ date:Date){
         var month: String!
         if((currentMonth(date) == 1)) {
@@ -248,6 +250,8 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         showLabel.text = "\(month as String)  \(self.currentYear(date))"
     }
     
+    
+    // show date on each cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         
@@ -289,6 +293,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         return cell
     }
     
+    // get current year
     func currentYear(_ date:Date)->Int{
         
         let componentsYear:DateComponents = (Calendar.current as NSCalendar).components([.year,.month,.day], from: date)
@@ -296,7 +301,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         return componentsYear.year!
     }
     
-    
+    // get current month
     func currentMonth(_ date:Date)->Int{
         
         let componentsYear:DateComponents = (Calendar.current as NSCalendar).components([.year,.month,.day], from: date)
@@ -370,6 +375,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
 
 }
 
+// change the Date to string
 func getstringfromdate_M(date : Date) -> String{
     let dateformatter = DateFormatter()
     

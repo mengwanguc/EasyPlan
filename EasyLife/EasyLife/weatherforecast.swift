@@ -97,8 +97,11 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // get data from weather api
     func getdata(){
        let  url = "http://api.openweathermap.org/data/2.5/forecast?\(location_end)&appid=e5ad7ed727b66d69dc3c323ad8b8fd71"
+        print(url)
         SharedNetwork.SharedInstance.grabSomeData(url){(response) -> Void in
             
             DispatchQueue.main.async
@@ -117,7 +120,7 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
     func getcurrdata(){
         
     let url = "http://api.openweathermap.org/data/2.5/weather?\(location_end)&appid=e5ad7ed727b66d69dc3c323ad8b8fd71"
-    
+    print(url)
     
     SharedNetwork.SharedInstance.grabSomeData(url){(response) -> Void in
     
@@ -148,12 +151,13 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
     }
 }
     
+    
+    
     func getfutureday(){
         var date = NSDate()
         for i in weatherdata{
             let temp =  NSDate(timeIntervalSince1970: Double(i.dt))
             if(!NSCalendar.current.isDate(date as Date, inSameDayAs:temp as Date)){
-                print("this if afla")
                 weather_day.append(i)
                 date = temp
             }
@@ -163,7 +167,7 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
     }
 
     
-    
+    // show weather of different time in one day
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! weatherforecastcell
         
@@ -206,7 +210,7 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
         return weatherdata.count
     }
     
-    
+    //get image from url
     func getimage(url:String)->UIImage{
         let path = URL(string: url)
         let data = try? Data(contentsOf: path!)
