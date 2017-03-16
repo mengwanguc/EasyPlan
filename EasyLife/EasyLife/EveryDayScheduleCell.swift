@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// - Description: set the label of UITableViewCell
 class EveryDayScheduleCell: UITableViewCell {
 
     @IBOutlet weak var descLabel: UILabel!

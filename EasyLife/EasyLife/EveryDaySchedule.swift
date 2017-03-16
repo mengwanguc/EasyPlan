@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import  UserNotifications
+
+// - Description: show all schedule which are setted in one day 
 class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewProtocol {
     
     
@@ -212,6 +214,7 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
 
 }
 
+// change the Date() to the format of "MM/dd/yy"
 func getstringfromdate(date : Date) -> String{
     let dateformatter = DateFormatter()
     
@@ -222,6 +225,7 @@ func getstringfromdate(date : Date) -> String{
     
 }
 
+// change the Date() to the format of "MM/dd/EEE HH:mm"
 func createstringfromdate(date : Date)->String{
     let dateformatter = DateFormatter()
     

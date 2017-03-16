@@ -8,6 +8,7 @@
 
 import UIKit
 
+// - Description: show the detail of the schedule 
 class ScheduleDetail: UIViewController {
 
 

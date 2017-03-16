@@ -21,15 +21,6 @@ class SharedNetwork: NSObject {
     }
     
     
-    func getuid(ts : String)-> String{
-        let test = "ts=\(ts as! String)&uid=U767389AA8"
-        let key = "f4e9afhjuyblv14i"
-        let hmacResult: String = test.hmac(algorithm: HMACAlgorithm.SHA1, key: key)
-        let allowedCharacterSet = (CharacterSet(charactersIn: "!*'();:@&=+$,/?%#[] ").inverted)
-        let escapedString = hmacResult.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)
-        print("\(escapedString)")
-        return escapedString!
-    }
     
     
     

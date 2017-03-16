@@ -6,6 +6,7 @@
 //  Copyright © 2017年 Haoze Wang. All rights reserved.
 //
 
+//- Description: Set some functions to get date from coredate and creat a class to store the data in Task. 
 import UIKit
 import CoreData
 class schedule: NSObject {

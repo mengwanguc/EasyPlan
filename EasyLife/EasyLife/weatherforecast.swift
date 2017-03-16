@@ -10,6 +10,8 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+
+// - Description: the view is used to show weather forecast 
 class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource {
 
    

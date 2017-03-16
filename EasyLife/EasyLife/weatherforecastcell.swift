@@ -8,6 +8,7 @@
 
 import UIKit
 
+// - Description: set the cell which used to show weather
 class weatherforecastcell: UICollectionViewCell {
     
     @IBOutlet weak var UIimageView: UIImageView!

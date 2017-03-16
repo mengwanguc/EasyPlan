@@ -8,6 +8,8 @@
 
 import UIKit
 import SystemConfiguration
+
+// - Description: show the detail of the task
 class TaskDetail: UIViewController {
 
     @IBOutlet weak var cityname: UILabel!

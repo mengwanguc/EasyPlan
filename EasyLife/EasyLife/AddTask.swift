@@ -11,6 +11,7 @@ import CoreData
 import UserNotifications
 import MapKit
 import SystemConfiguration
+// - Description: The class could let you add task into our database.  
 class AddTask: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
     @IBOutlet weak var UITextLabel: UITextField!

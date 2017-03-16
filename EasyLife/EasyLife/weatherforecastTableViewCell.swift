@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//- Description: set the cell which used to show weather
 class weatherforecastTableViewCell: UITableViewCell {
 
     @IBOutlet weak var UItemp: UILabel!

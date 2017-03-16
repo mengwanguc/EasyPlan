@@ -11,7 +11,7 @@ import UserNotifications
 import MapKit
 
 private let reuseIdentifier = "Cell"
-
+// - Description: the class is used to set the view of Calander. 
 class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
 
     @IBOutlet weak var showLabel: UILabel!

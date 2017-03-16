@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+// - Description: the class set the view which could let you add schedule in coredata.
 class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
     
     
