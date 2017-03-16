@@ -97,7 +97,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
 
     }
     
-    
+    //open the instruction view
     @IBAction func openInstruction(_ sender: Any) {
         print("open instructions")
         view.addSubview(self.instructionView)
@@ -132,7 +132,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
     
     
     
-    
+    // set the collectionview
     func setCollectionViewLayout(){
         
     
@@ -163,6 +163,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
         // Dispose of any resources that can be recreated.
     }
     
+    //get date of new month
     @IBAction func clickNextBtn(_ sender: Any) {
         var dateComponents:DateComponents = DateComponents.init()
         dateComponents.month = 1;
@@ -178,7 +179,7 @@ class CalanderViewController: UIViewController,UITableViewDelegate,UICollectionV
     }
     
     
-    
+    // get the data of pre month 
     @IBAction func clickPreBtn(_ sender: Any) {
         
         var dateComponents:DateComponents = DateComponents.init()

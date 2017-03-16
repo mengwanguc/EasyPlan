@@ -58,6 +58,8 @@ class TaskDetail: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // get today's weather
     func loadcurrdate(){
         
         var url: String!
@@ -90,7 +92,7 @@ class TaskDetail: UIViewController {
     }
     
     
-   
+   // show the city's weather forecast
     @IBAction func MoreWeather(_ sender: Any) {
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
@@ -99,7 +101,7 @@ class TaskDetail: UIViewController {
         
         }
     
-    
+    //get image from url
     func getimage(url:String)->UIImage{
         let path = URL(string: url)
         let data = try? Data(contentsOf: path!)

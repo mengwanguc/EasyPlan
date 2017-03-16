@@ -69,6 +69,8 @@ class ScheduleDetail: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //get today's weather
     func loadcurrdate(flag : Int){
         
         var url: String!
@@ -117,6 +119,8 @@ class ScheduleDetail: UIViewController {
         }
     }
     
+    
+    //get future's weather
     func loadfurdata(date: NSDate){
         var time = Int(task.fin_time.timeIntervalSince1970)
         time = time - 21800
@@ -192,7 +196,7 @@ class ScheduleDetail: UIViewController {
         let data = try? Data(contentsOf: path!)
         return UIImage(data: data!)!
     }
-    
+    //change Date() to the format of "MM/dd/EEE HH:mm"
     func getstringfromdate_schedule(date : Date) -> String{
         let dateformatter = DateFormatter()
         
@@ -202,7 +206,7 @@ class ScheduleDetail: UIViewController {
         return now
         
     }
-    
+    // show start point's weather
     @IBAction func getbeginweather(_ sender: Any) {
         
         let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
@@ -211,7 +215,7 @@ class ScheduleDetail: UIViewController {
         navigationController?.pushViewController(myVC, animated: true)
         
     }
-  
+  // show destination's weather
     @IBAction func getendweather(_ sender: Any) {
         let myVC = storyboard?.instantiateViewController(withIdentifier: "weatherforecast") as! weatherforecast
         myVC.location_end = point_end

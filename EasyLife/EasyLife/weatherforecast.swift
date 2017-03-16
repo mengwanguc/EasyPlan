@@ -119,6 +119,8 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
         }
     }
     
+    
+    // get today's weather
     func getcurrdata(){
         
     let url = "http://api.openweathermap.org/data/2.5/weather?\(location_end)&appid=e5ad7ed727b66d69dc3c323ad8b8fd71"
@@ -154,7 +156,7 @@ class weatherforecast: UIViewController,UICollectionViewDataSource,UICollectionV
 }
     
     
-    
+    // get future weather
     func getfutureday(){
         var date = NSDate()
         for i in weatherdata{

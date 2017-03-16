@@ -144,6 +144,8 @@ class EveryDaySchedule: UITableViewController,UIActionSheetDelegate, UpdateViewP
         }
     }
     
+    
+    //update the tableview 
     func updatedayschedule(){
         if(date == nil){
             let currdate = getstringfromdate(date: Date())

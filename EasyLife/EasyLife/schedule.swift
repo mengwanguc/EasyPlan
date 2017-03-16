@@ -22,7 +22,7 @@ class schedule: NSObject {
     var end = ""
     var exp_time = 0
     static let scheduleInstance = schedule()
-    
+    // insert task into coredata
      func insertDate(schedule : Task){
         let moc = DataController().managedObjectContext
         
@@ -50,7 +50,7 @@ class schedule: NSObject {
         }
     }
     
-    
+    //get task from coredata
     func fetchDate(date : String) -> [schedule]{
         let moc = DataController().managedObjectContext
         let TaskFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
@@ -71,7 +71,7 @@ class schedule: NSObject {
         }
     }
     
-    
+    //get data from coredata
     func removeDate(id : String){
         let moc = DataController().managedObjectContext
         let TaskFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")

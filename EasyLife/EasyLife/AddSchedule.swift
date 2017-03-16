@@ -112,16 +112,19 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         }
     }
     
+    //remove keyboard when type other uiview
     func tappedAwayFunction(sender: UITapGestureRecognizer){
         TextField.resignFirstResponder()
         UITextLabel.resignFirstResponder()
     }
     
+    
+    //remove keyboard when type return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         TextField.setContentOffset(CGPoint.zero, animated: false)
@@ -372,6 +375,8 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     }
     
     
+    
+    //let user could change time
     @IBAction func SetTime(_ sender: Any) {
         set_fin_time = true
         changeflag = 1
@@ -387,7 +392,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     }
     
     
-    
+    // create an array of weather
     func creatday(){
          date.append(Date())
         day.append("Today")
@@ -396,7 +401,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         }
     }
     
-    
+    // get new date
     func getnextdate(day : Int)-> Date{
         let calendar = Calendar.current
         let twoDaysAgo = calendar.date(byAdding: .day, value: day , to: Date())
@@ -415,7 +420,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
 
     }
     
-    
+    // get string from Date()
     func getdatefromstring(string: String)->Date{
         let formatter = DateFormatter()
         formatter.dateFormat = "yy/MM/dd/EEE HH:mm"
@@ -423,7 +428,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
     }
 
    
-    
+    // get string from Date()
     func createstringfromdate(date : Date)->String{
         let dateformatter = DateFormatter()
         
@@ -432,7 +437,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         let now = dateformatter.string(from: date)
         return now
     }
-    
+    // get string from Date()
     func getstringfromdate_yy(date: Date) -> String{
         let dateformatter = DateFormatter()
         
@@ -442,7 +447,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         return now
     }
     
-    
+    // get string from Date()
     func getstringfromdate_hour(date: Date) -> String{
         let dateformatter = DateFormatter()
         
@@ -451,7 +456,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
         let now = dateformatter.string(from: date)
         return now
     }
-    
+    // get string from Date()
     func getstringfromdate_minute(date: Date) -> String{
         let dateformatter = DateFormatter()
         
@@ -463,7 +468,7 @@ class AddSchedule: UIViewController,UITextViewDelegate,UIPickerViewDelegate,UIPi
 
     
     
-    
+    // let user could get to the map view to set location
     @IBAction func setLocation(_ sender: Any) {
         if(set_fin_time == false){
             let alert = UIAlertController(title: "Error",message:"Please choose the finishing time", preferredStyle:UIAlertControllerStyle.alert)
