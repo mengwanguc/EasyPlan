@@ -1,4 +1,4 @@
-# EasyLife
+# EasyLife (aka. EasyPlan)
 This app helps you make schedules more easily. Using this app, you can:
 
 
